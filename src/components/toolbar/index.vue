@@ -70,9 +70,9 @@ export default {
         <li :class="[currentNavSelected === 'plugin' ? 'selected' : '']">
           <RouterLink to="/plugin">插件</RouterLink>
         </li>
-        <!-- <li :class="[currentNavSelected === 'dev' ? 'selected' : '']">
-          <RouterLink to="/dev">开发</RouterLink>
-        </li> -->
+        <li :class="[currentNavSelected === 'dev' ? 'selected' : '']">
+          <RouterLink to="/dev">文档</RouterLink>
+        </li>
         <li :class="[currentNavSelected === 'download' ? 'selected' : '']">
           <RouterLink to="/download">下载</RouterLink>
         </li>

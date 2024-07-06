@@ -35,6 +35,10 @@ export default {
             <RouterLink to="/plugin">插件</RouterLink>
           </li>
           <ElDivider />
+          <li :class="[currentNavSelected === 'dev' ? 'selected' : '']">
+            <RouterLink to="/dev">文档</RouterLink>
+          </li>
+          <ElDivider />
           <li :class="[currentNavSelected === 'download' ? 'selected' : '']">
             <RouterLink to="/download">下载</RouterLink>
           </li>
