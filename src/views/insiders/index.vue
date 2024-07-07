@@ -51,7 +51,7 @@ const { isDark } = storeToRefs(useWindowStore());
 <template>
   <div class="insiders">
     <h2>欢迎您加入ReadCat内测</h2>
-    <p>支持Windows(>=10)、Linux、MacOS(darwin)平台</p>
+    <p>支持Windows、Linux、MacOS(darwin)平台</p>
     <div class="downloads">
       <p>下载内测版:</p>
       <ElTable border :data="downloads" :show-header="false">
