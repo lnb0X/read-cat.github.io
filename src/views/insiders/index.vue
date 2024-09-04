@@ -3,12 +3,14 @@ import { ElTable, ElTableColumn, ElImage, ElLink } from 'element-plus';
 import IconGithub from '../../assets/icon/icon-github.svg';
 import { storeToRefs } from 'pinia';
 import { useWindowStore } from '../../store/window';
-import QRCode from '../../assets/qrcode.webp';
-import QRCodeDark from '../../assets/qrcode-dark.webp';
-import QRCode1 from '../../assets/qrcode-1.webp';
-import QRCode1Dark from '../../assets/qrcode-1-dark.webp';
-import QRCode2 from '../../assets/qrcode-2.webp';
-import QRCode2Dark from '../../assets/qrcode-2-dark.webp';
+import QRCode from '../../assets/qrcode.jpg';
+import QRCodeDark from '../../assets/qrcode-dark.jpg';
+import QRCode1 from '../../assets/qrcode-1.jpg';
+import QRCode1Dark from '../../assets/qrcode-1-dark.jpg';
+import QRCode2 from '../../assets/qrcode-2.jpg';
+import QRCode2Dark from '../../assets/qrcode-2-dark.jpg';
+import QRCode3 from '../../assets/qrcode-3.jpg';
+import QRCode3Dark from '../../assets/qrcode-3-dark.jpg';
 
 const downloads = [{
   title: '123云盘(已停止更新最新版本)<br>(插件、Linux、MacOS、Windows)',
@@ -44,6 +46,14 @@ const qqs = [{
     light: QRCode2,
     dark: QRCode2Dark
   }
+}, {
+  title: '内测交流群3',
+  code: '817944882',
+  link: 'https://qm.qq.com/q/EU1ANXkA48',
+  image: {
+    light: QRCode3,
+    dark: QRCode3Dark
+  }
 }];
 
 const { isDark } = storeToRefs(useWindowStore());
@@ -77,7 +87,7 @@ const { isDark } = storeToRefs(useWindowStore());
         <div v-for="qq of qqs" class="qq">
           <p>{{ qq.title }}(群号：<ElLink :href="qq.link" target="_blank">{{ qq.code }}</ElLink>)</p>
           <div class="qrcode">
-            <img :src="isDark ? qq.image.dark : qq.image.light" alt="QQ群二维码" width="200px" />
+            <img :src="isDark ? qq.image.dark : qq.image.light" alt="QQ群二维码" />
           </div>
         </div>
       </div>
@@ -134,7 +144,7 @@ const { isDark } = storeToRefs(useWindowStore());
     .qqs {
       display: flex;
       flex-wrap: wrap;
-
+      
       .qq {
         margin-right: 10px;
 
@@ -155,6 +165,13 @@ const { isDark } = storeToRefs(useWindowStore());
           border-radius: 10px;
           border: 2px solid var(--rc-qrcode-border-color);
           background-color: var(--rc-qrcode-bgcolor);
+          overflow: hidden;
+
+          img {
+            width: 300px;
+            object-fit: cover;
+            transform: translate(0px, -10px);
+          }
         }
       }
     }
