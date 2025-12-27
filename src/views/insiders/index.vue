@@ -11,6 +11,8 @@ import QRCode2 from '../../assets/qrcode-2.jpg';
 import QRCode2Dark from '../../assets/qrcode-2-dark.jpg';
 import QRCode3 from '../../assets/qrcode-3.jpg';
 import QRCode3Dark from '../../assets/qrcode-3-dark.jpg';
+import QRCode4 from '../../assets/qrcode-4.jpg';
+import QRCode4Dark from '../../assets/qrcode-4-dark.jpg';
 
 const downloads = [{
   title: '123云盘(已停止更新最新版本)<br>(插件、Linux、MacOS、Windows)',
@@ -23,7 +25,7 @@ const downloads = [{
 }];
 
 const qqs = [{
-  title: '内测交流群',
+  title: '官方内测交流群',
   code: '903473975',
   link: 'https://qm.qq.com/q/y5yIM9MIkE',
   image: {
@@ -31,7 +33,7 @@ const qqs = [{
     dark: QRCodeDark
   }
 }, {
-  title: '内测交流群1',
+  title: '官方内测交流群1',
   code: '959115174',
   link: 'https://qm.qq.com/q/qKuY7T8Wu6',
   image: {
@@ -39,7 +41,7 @@ const qqs = [{
     dark: QRCode1Dark
   }
 }, {
-  title: '内测交流群2',
+  title: '官方内测交流群2',
   code: '974942893',
   link: 'https://qm.qq.com/q/ajfGaAKivC',
   image: {
@@ -47,12 +49,20 @@ const qqs = [{
     dark: QRCode2Dark
   }
 }, {
-  title: '内测交流群3',
+  title: '官方内测交流群3',
   code: '817944882',
   link: 'https://qm.qq.com/q/EU1ANXkA48',
   image: {
     light: QRCode3,
     dark: QRCode3Dark
+  }
+}, {
+  title: '非官方交流群',
+  code: '1039128110',
+  link: 'https://qm.qq.com/q/4WUNJACeHS',
+  image: {
+    light: QRCode4,
+    dark: QRCode4Dark
   }
 }];
 
